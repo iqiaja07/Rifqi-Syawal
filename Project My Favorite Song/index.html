@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dhruv - double take (Lyric Edit)</title>
+    <style>
+        body {
+            background-color: #513507; /* Background hitam */
+            color: #ffffff; /* Teks putih */
+            /* Menggunakan font ala kode/terminal */
+            font-family: 'Courier New', Courier, monospace; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #lyric-container {
+            font-size: 3rem; /* Ukuran teks */
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 2px;
+            /* Efek transisi halus saat teks muncul dan menghilang */
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+            text-shadow: 0 0 5px rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="lyric-container"></div>
+
+    <script>
+        // Daftar lirik yang akan ditampilkan bergantian
+        const lyrics = [
+"smilaa laaa laaa",
+"To think about you in that way, but",
+"I would be lying",
+"And I pretend I'm happy for you",
+"When you find some dude to take home",
+"But I won't deny that",
+"In the midst of the crowds",
+"In the shapes in the clouds",
+"I don't see nobody but you",
+"In my rose-tinted dreams",
+"Wrinkled silk on my sheets",
+"I don't see nobody but you",
+
+"Boy, you got me hooked on to something",
+"Who could say that they saw us coming?",
+"Tell me, do you feel the love?",
+"Spend the summer of a lifetime with me",
+"Let me take you to the place of your dreams",
+"Tell me, do you feel the love?",
+
+"And I could say I never unzipped",
+"Those blue Levi's inside my head",
+"But that's far from the truth",
+"Don't know what's come over me",
+"It seems like yesterday when I said",
+"We'll be friends forever",
+
+"Constellations of stars",
+"Murals on city walls",
+"I don't see nobody but you",
+"You're my vice, you're my muse",
+"You're a nineteenth-floor view",
+"I don't see nobody but you",
+
+"Boy, you got me hooked on to something",
+"Who could say that they saw us coming?",
+"Tell me, do you feel the love?",
+"Spend the summer of a lifetime with me",
+"Let me take you to the place of your dreams",
+"Tell me, do you feel the love?",
+
+"Boy, you got me hooked on to something",
+"Who could say that they saw us coming?",
+"Tell me, do you feel the love?",
+"Spend the summer of a lifetime with me",
+"Let me take you to the place of your dreams",
+"Tell me, do you feel the love?",
+
+"Do you feel the love?",
+"Do you feel the love?",
+"Do you feel the love?",
+"Do you feel the love?",
+"Feel the love",
+"Do you feel the love?",
+        ];
+
+        const container = document.getElementById('lyric-container');
+        let currentIndex = 0;
+
+        function animateLyrics() {
+            if (currentIndex >= lyrics.length) {
+                currentIndex = 0; // Ulangi lirik dari awal jika sudah habis
+            }
+
+            // Ganti teks dengan lirik saat ini
+            container.textContent = lyrics[currentIndex];
+            
+            // Efek Fade In (muncul)
+            container.style.opacity = 1;
+
+            // Biarkan teks tampil selama 3 detik, lalu jalankan Fade Out
+            setTimeout(() => {
+                container.style.opacity = 0; // Efek Fade Out (menghilang)
+                currentIndex++;
+                
+                // Tunggu 1 detik saat layar kosong sebelum memunculkan lirik berikutnya
+                setTimeout(animateLyrics, 900); 
+            }, 2000);
+        }
+
+        // Mulai animasi 1 detik setelah halaman dibuka
+        setTimeout(animateLyrics, 900);
+    </script>
+</body>
+</html>

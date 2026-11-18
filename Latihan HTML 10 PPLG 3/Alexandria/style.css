@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: Arial, sans-serif;
+  background-image: url('hanyut.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-weight: bold;
+}
+
+header {
+  padding: 20px;
+  background-color: #dceaf5;
+  text-align: center;
+  opacity: 0.9;
+}
+
+header h1 {
+  color: #94a6ce;
+}
+
+nav {
+  padding: 12px;
+  background: linear-gradient(to right, #8597c0, #8292bd, #6d87a3, #6c7a9a);
+  text-align: center;
+  opacity: 1;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+nav a {
+  margin: 0 8px;
+  color: #313233;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  color: black;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+section {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+
+section h2 {
+  color: #6f84ad;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  text-align: center;
+}
+
+footer {
+  padding: 10px;
+  background-color: #dceaf5;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  nav{
+    padding: 8px; 
+    opacity: 0.7;  
+    color: black;
+  }
+}
+
+
+.struktur p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pendaftaran p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

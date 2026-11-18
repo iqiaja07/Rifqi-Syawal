@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko Kita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Toko Kita</h1>
+    <button id="tombol-keranjang" class="utama" type="button">Keranjang (0)</button>
+  </header>
+
+  <main>
+    <div class="filter" id="filter"></div>
+
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <aside id="keranjang">
+    <div class="baris" style="border:none">
+      <h2 style="margin:0; flex:1">Keranjang</h2>
+      <button id="tutup" type="button">Tutup</button>
+    </div>
+    <div id="isi-keranjang"></div>
+    <div class="total"><span>Total</span><span id="total">Rp 0</span></div>
+    <button id="bayar" class="utama" type="button" style="width:100%">Bayar</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title>Perfume Shop</title>
+        <style>
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            header {
+                background-color: rgb(128, 106, 78);
+                text-align: center;
+                color:aliceblue;
+                padding: 20px;
+                border-radius: 30px;
+            }
+
+            header h1 {
+                margin: 0 0 15px 0;
+                font-size: 45px;
+            }
+
+            nav {
+                margin-top: 7px;
+            }
+
+            nav a {
+                color:aliceblue;
+                text-decoration: none;
+                margin: 0 8px;
+                font-weight: bold;
+            }
+
+            nav a:hover {
+                color:rgb(112, 104, 98);
+                text-decoration:solid;
+            }
+
+            main {
+                width: 300%;
+                margin: 30px auto;
+                max-width: 1100px;
+
+            }
+
+            section {
+                background-color: rgb(150, 120, 80);
+                padding: 30px;
+                margin-bottom: 30px;
+                border-radius: 15px;
+                color:aliceblue;
+            }
+
+            section h2 {
+                color :aliceblue;
+                text-align: center;
+                margin: 0 0 25px 0;
+            }
+
+            #beranda {
+               text-align: center;
+               justify-content: center;
+            }
+
+            #beranda img {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                margin-top: 10px;
+                border: 2px solid #fffefe;
+                border-radius: 10px;
+            }
+
+            #beranda p {
+                font-size: 18px;
+                color:aliceblue;
+            }
+
+            table {
+                width: 100%;
+                margin-top: 20px;
+                background-color: rgba(251, 250, 247, 0.806);
+                color:#0d0d0d;
+                border:rgb(12, 12, 12);
+            }
+
+            th {
+                background-color: rgb(248, 247, 247);
+                color:rgb(12, 12, 12);
+                padding: 12px;
+                font-size: 20px;
+            }
+
+            td {
+                padding: 12px;
+                text-align: center;
+                border: 1px solid #f0eeec;
+            }
+
+            form {
+                max-width: 600px;
+                margin: auto;
+                background-color: rgb(116, 95, 63);
+                padding: 10px;
+            }
+
+            form p {
+                margin-bottom: 15px;
+            }
+
+            tr {
+                font-size: 15px;
+            }
+
+            label, .pp {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: white;
+            }
+
+            input,
+            textarea {
+                width: 90%;
+                padding: 12px;
+                margin: 10px;
+                border: 1px solid #f5f2f2;
+                border-radius: 6px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button, .Hai {
+                background-color: #7a6148;
+                color:rgb(253, 252, 252);
+                border: none;
+                padding: 12px 25px;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                display: flex;
+                text-align:center;
+                justify-content: center;
+            }
+
+            #tombolSapa {
+                width: fit-content;
+                margin: 0 auto;
+                
+            }
+
+            button:hover {
+                background-color: #9c7c5b;
+                text-decoration: double;
+            }
+
+           #tentang_kami {
+            text-align: center;
+           }
+
+           footer {
+            text-align: center;
+            border-radius: 12px;
+            background-color: #7a6148;
+            padding: 20px;
+            color:aliceblue;
+           }
+
+           #tentang_toko p {
+            text-align: center;
+            font-size: 18px;
+           }
+          
+
+
+        </style>
+    </head>
+    
+<body>
+
+<header style="background-color: rgb(134, 110, 80); border-radius: 2px;">
+            <h1 style="color:rgb(253, 255, 252)">LUMAURAS SHOP</h1>
+            <nav>
+                <a href="#beranda" >Beranda</a>
+                <a href="#tentang_toko" >Tentang Toko</a>
+                <a href="#product" >Product</a>
+                <a href="#contact" >Contact</a>
+                <a href="#tentang_kami" >Tentang Kami</a>
+            
+            </nav>
+</header>
+         <hr>
+         
+<main>
+
+             <section id="beranda">
+             <h2>Beranda</h2>
+              <img src="img/danny.jpeg" alt="Banner Perfume" />
+              <button id="tombolSapa" class="Hai">Sapa Pengunjung</button>
+              <p id="hasilSapa"></p>
+              </section>
+              <hr>
+            
+              <section id="tentang_toko">
+                <h2>Tentang Toko</h2>
+                <p>Toko ini dipersembahkan untuk rakyat kalcer umkm</p>
+                <p> Brand ini saya ciptakan karena parfume adalah suatu ciptaan
+                 manusia yang mencintai keharuman dan tuhan suka akan hal itu
+                 oleh karena itu saya ingin menciptakan wewangain yang indah 
+                 dengan bahan-bahan yang telah disediakan tuhan
+              </p>
+
+              
+              </section>
+              <hr>
+             
+              <section id="product">
+             <h2>Tabel Product</h2>
+             <label for="cariMenu" class="pp">Cari Menu:</label>
+             <input type="text" id="cariMenu"
+             placeholder="Temukan Parfume: " />
+              
+             <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="daftarMenu">
+                    <tr>
+                        <td>1</td>
+                        <td>Oud Voyager</td>
+                        <td>Rp.400.000</td>
+                        <td><img src="img/bima.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ombre Leather</td>
+                        <td>Rp.299.000</td>
+                        <td><img src="img/WhatsApp Image 2026-09-29 at 14.28.44.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Escobar</td>
+                        <td>Rp.560.000</td>
+                        <td><img src="img/faizal.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Oud Wood</td>
+                        <td>Rp.250.000</td>
+                        <td><img src="img/woilah.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Noir De Noir</td>
+                        <td>Rp.390.000</td>
+                        <td><img src="img/iki.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Black Orchid</td>
+                        <td>Rp.129.000</td>
+                        <td><img src="img/danny.jpeg" weight="100px" height="100px"></td>
+                    </tr> 
+                     <tr>
+                        <td>7</td>
+                        <td>Lost Cherry</td>
+                        <td>Rp.550.000</td>
+                        <td><img src="img/azriel.jpeg" weight="100px" height="100px"></td>
+                    </tr>  
+                    <tr>
+                        <td>8</td>
+                        <td>Noir</td>
+                        <td>Rp.200.000</td>
+                        <td><img src="img/sumpit.jpeg" weight="100px" height="100px"></td>
+                    </tr>  
+                    <tr>
+                        <td>9</td>
+                        <td>Tobacco Oud</td>
+                        <td>Rp.330.000</td>
+                        <td><img src="img/rizky.jpeg" weight="100px" height="100px"></td>
+                    </tr>  
+                    <tr> 
+                        <td>10</td>
+                        <td>Reserve</td>
+                        <td>Rp.370.000</td>
+                        <td><img src="img/WhatsApp Image 2026-09-29 at 14.29.37.jpeg" weight="100px" height="100px"></td>
+                    </tr>
+                       
+                   
+                </tbody>
+             </table>
+             <p id="hasilCari"></p>
+             </section>
+             <hr>
+            
+             <section id="contact">
+             <h2>Hubungi Kami</h2>
+             <form action="#" method="POST" id="formKontak">
+                <p>
+                    <label>Nama Lengkap: </label>
+                    <input
+                     type="text"
+                     name="nama" 
+                     id="nama"
+                     placeholder="Masukan nama anda"
+                    
+                     >
+                     
+                </p>
+
+                 <p>
+                   <label>Email: </label>
+                    <input
+                     type="email"
+                     name="email" 
+                     id="email"
+                     placeholder="email@gmail.com"
+                    
+                     >
+                    
+                </p>
+
+                 <p>
+                    <label>No.Handphone: </label>
+                    <input 
+                     type="number"
+                     name="number" 
+                     id="number"
+                     placeholder="08xxxxxxxxxx"
+                  
+                     >
+
+                </p>
+                 <p>
+                    <label>Pesan:</label>
+                   <textarea
+                     name="text"
+                     id="pesan"
+        
+                     >
+                   </textarea>
+               
+                 </p>
+
+                 <button>Simpan</button>
+             </form>
+             <p id="hasilForm"></p>
+             </section>
+             <hr>
+
+             <section id="tentang_kami" class="foto">
+                 <h2>Tentang kami</h2>
+                 <p>Kelompok apa kabar</p>
+                 <img src="img/foto.jpg" width="400px" height="290px" >
+                 
+                 <p>Rifqi Syawal</p>
+                 <img src="img/WIN_20260929_14_12_55_Pro.jpg" alt="Profile Rifqi" width="300px" height="300px">
+                 <p>NISN: 0109433314 </p>
+
+                 <p>M.Rizqy Azriel </p>
+                 <img src="img/WIN_20260929_14_13_39_Pro.jpg" alt="Profile Ajril" width="300px" height="300px">
+                 <p>NISN: 011904292  </p>
+
+                 <p>Bima Ar'Rizky Prabowo</p>
+                 <img src="img/WIN_20260929_14_13_47_Pro.jpg" alt="Profile Bima" width="300px" height="300px">
+                 <p>NISN: 0107991773 </p>
+
+                 <p>Mochamad Faizal</p>
+                 <img src="img/WIN_20260929_14_13_29_Pro.jpg" alt="Profile Ijal" width="300px" height="300px">
+                 <p>NISN: 0108637908 </p>
+
+                 <p>Danny Kurniawansyah</p>
+                 <img src="img/orggila.jpg" alt="Profile Daniii HANDSOME" width="300px" height="300px">
+                 <p>NISN: 0103102921 </p>
+
+             </section>
+             <hr>
+
+</main>
+
+<footer>
+            <p>copyright &copy; BY kelompok apa kabar</p> 
+</footer>
+
+       
+     </body>
+</html>
+
+  <script>
+
+    const namaToko = "Lumaura's Shop";
+    let jumlahPengunjung = 0;
+
+    function sapaPengunjung(){
+        jumlahPengunjung++;
+
+        const hasil = document.getElementById('hasilSapa');
+        [];
+        hasil.textContent =
+         "Selamat datang di " +
+         namaToko +
+         "! Kamu pengunjung ke-" +
+         jumlahPengunjung +
+         ".";
+
+        alert("Halo! Selamat datang di" + namaToko);
+    }
+
+    document
+    .getElementById("tombolSapa")
+    .addEventListener("click", sapaPengunjung);
+
+    const inputCari = document.getElementById("cariMenu");
+    const barisMenu = document.querySelectorAll("#daftarMenu tr");
+    const hasilPencarian = document.getElementById("hasilCari")
+
+    inputCari.addEventListener("input", function () {
+        const kataKunci = inputCari.value.toLowerCase();
+        let jumlahDitemukan = 0;
+
+        barisMenu.forEach(function (baris) {
+            const namaMenu = baris.cells[1].textContent.toLowerCase();
+            const kategori = baris.cells[2].textContent.toLowerCase();
+
+            if(namaMenu.includes(kataKunci) || kategori.includes(kataKunci))
+            {
+                baris.style.display = "";
+                jumlahDitemukan++;
+            }   else {
+                baris.style.display = "none";
+            }   
+        });
+
+        if(jumlahDitemukan > 0) {
+            hasilPencarian.textContent = "Ditemukan" + jumlahDitemukan + " menu.";
+        }   else {
+            hasilPencarian.textContent = "Menu tidak ditemukan.";
+        }
+      });
+
+      document
+      .getElementById("formKontak")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("nama").value.trim();
+        const email = document.getElementById("email").value;
+        const number = document.getElementById("number").value;
+        const pesan = document.getElementById("pesan").value;
+
+       if (nama === "" || email === "" || number === "" || pesan === "") {
+         document.getElementById("hasilForm").textContent =
+          "Semua kolo wajib diisi,";
+       } else {
+        document.getElementById("hasilForm").textContent =
+          "Terima Kasih, " +
+          nama +
+          "! Pesan kamu berhasil diperiksa, Email: " +
+          email;
+
+          document.getElementById("formKontak").reset();
+       }
+    });
+ </script>
+            
+      

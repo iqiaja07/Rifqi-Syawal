@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LUMIÈRE — Modern Dining</title>
+  <meta name="description" content="LUMIÈRE Modern Dining — pengalaman kuliner modern dengan cita rasa yang berkesan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <span>LUMIÈRE</span>
+        <small>MODERN DINING</small>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+
+        <a href="#reservation" class="nav-reserve">
+          Reserve a Table
+        </a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+
+        <div class="hero-text reveal">
+
+          <p class="eyebrow">
+            EST. 2026 · BOGOR
+          </p>
+
+          <h1>
+            Where Every
+            <em>Moment</em>
+            Tastes Better.
+          </h1>
+
+          <p class="hero-description">
+            Sebuah pengalaman dining modern yang mempertemukan
+            bahan terbaik, kreativitas, dan suasana yang tak terlupakan.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#menu" class="btn btn-primary">
+              Explore Our Menu
+              <span>↗</span>
+            </a>
+
+            <a href="#reservation" class="btn btn-outline">
+              Reserve a Table
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-info reveal">
+
+          <div>
+            <strong>12:00 — 22:00</strong>
+            <span>Tuesday — Sunday</span>
+          </div>
+
+          <div>
+            <strong>Jl. Culinary No. 18</strong>
+            <span>Bogor, Indonesia</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL TO DISCOVER</span>
+        <div class="scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro section" id="about">
+
+      <div class="container intro-grid">
+
+        <div class="section-label reveal">
+          <span>01</span>
+          <p>OUR STORY</p>
+        </div>
+
+        <div class="intro-content reveal">
+
+          <p class="eyebrow">
+            MORE THAN A RESTAURANT
+          </p>
+
+          <h2>
+            A place where
+            <em>food becomes</em>
+            an experience.
+          </h2>
+
+          <p class="body-text">
+            LUMIÈRE hadir dengan satu tujuan sederhana:
+            menciptakan pengalaman makan yang terasa istimewa.
+            Kami memadukan bahan lokal berkualitas dengan teknik
+            modern untuk menghasilkan hidangan yang penuh karakter.
+          </p>
+
+          <a href="#experience" class="text-link">
+            Discover our story
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURE ================= -->
+    <section class="feature-image">
+
+      <div class="feature-overlay"></div>
+
+      <div class="container feature-content reveal">
+
+        <p class="eyebrow">THE LUMIÈRE EXPERIENCE</p>
+
+        <h2>
+          Crafted with intention.
+          <br>
+          Served with <em>heart.</em>
+        </h2>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+    <section class="menu-section section" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="section-number">02</span>
+            <p class="eyebrow">OUR MENU</p>
+
+            <h2>
+              Taste the
+              <em>extraordinary.</em>
+            </h2>
+          </div>
+
+          <p>
+            Setiap hidangan dibuat dari bahan pilihan
+            dan disiapkan dengan perhatian pada setiap detail.
+          </p>
+
+        </div>
+
+
+        <div class="menu-tabs reveal">
+
+          <button class="active" data-filter="all">
+            All
+          </button>
+
+          <button data-filter="starter">
+            Starter
+          </button>
+
+          <button data-filter="main">
+            Main Course
+          </button>
+
+          <button data-filter="dessert">
+            Dessert
+          </button>
+
+          <button data-filter="drink">
+            Drinks
+          </button>
+
+        </div>
+
+
+        <div class="menu-grid" id="menuGrid">
+
+          <!-- ITEM 1 -->
+          <article class="menu-card reveal" data-category="starter">
+
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Burrata Garden">
+
+              <button class="menu-plus" data-menu="Burrata Garden">
+                +
+              </button>
+            </div>
+
+            <div class="menu-info">
+              <div>
+                <h3>Burrata Garden</h3>
+                <p>Tomato, basil oil, balsamic pearls</p>
+              </div>
+
+              <strong>Rp 85K</strong>
+            </div>
+
+          </article>
+
+
+          <!-- ITEM 2 -->
+          <article class="menu-card reveal" data-category="main">
+
+            <div class="menu-image">
+
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Herb Chicken">
+
+              <span class="menu-badge">
+                CHEF'S PICK
+              </span>
+
+              <button class="menu-plus" data-menu="Herb Roasted Chicken">
+                +
+              </button>
+
+            </div>
+
+            <div class="menu-info">
+
+              <div>
+                <h3>Herb Roasted Chicken</h3>
+                <p>Garden herbs, roasted vegetables, jus</p>
+              </div>
+
+              <strong>Rp 145K</strong>
+
+            </div>
+
+          </article>
+
+
+          <!-- ITEM 3 -->
+          <article class="menu-card reveal" data-category="main">
+
+            <div class="menu-image">
+
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85" alt="Truffle Pasta">
+
+              <button class="menu-plus" data-menu="Truffle Cream Pasta">
+                +
+              </button>
+
+            </div>
+
+            <div class="menu-info">
+
+              <div>
+                <h3>Truffle Cream Pasta</h3>
+                <p>Fresh pasta, parmesan, black truffle</p>
+              </div>
+
+              <strong>Rp 125K</strong>
+
+            </div>
+
+          </article>
+
+
+          <!-- ITEM 4 -->
+          <article class="menu-card reveal" data-category="main">
+
+            <div class="menu-image">
+
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Grilled Beef">
+
+              <button class="menu-plus" data-menu="Charcoal Grilled Beef">
+                +
+              </button>
+
+            </div>
+
+            <div class="menu-info">
+
+              <div>
+                <h3>Charcoal Grilled Beef</h3>
+                <p>Australian beef, potato purée, red wine sauce</p>
+              </div>
+
+              <strong>Rp 195K</strong>
+
+            </div>
+
+          </article>
+
+
+          <!-- ITEM 5 -->
+          <article class="menu-card reveal" data-category="dessert">
+
+            <div class="menu-image">
+
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Vanilla Panna Cotta">
+
+              <button class="menu-plus" data-menu="Vanilla Panna Cotta">
+                +
+              </button>
+
+            </div>
+
+            <div class="menu-info">
+
+              <div>
+                <h3>Vanilla Panna Cotta</h3>
+                <p>Vanilla bean, berries, honey crumble</p>
+              </div>
+
+              <strong>Rp 65K</strong>
+
+            </div>
+
+          </article>
+
+
+          <!-- ITEM 6 -->
+          <article class="menu-card reveal" data-category="drink">
+
+            <div class="menu-image">
+
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=85" alt="Citrus Garden">
+
+              <button class="menu-plus" data-menu="Citrus Garden">
+                +
+              </button>
+
+            </div>
+
+            <div class="menu-info">
+
+              <div>
+                <h3>Citrus Garden</h3>
+                <p>Yuzu, orange, rosemary, sparkling water</p>
+              </div>
+
+              <strong>Rp 48K</strong>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="center-button reveal">
+
+          <button class="btn btn-dark" id="viewMenuBtn">
+            View Full Menu
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="experience section" id="experience">
+
+      <div class="container experience-grid">
+
+        <div class="experience-image reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=90"
+            alt="Lumiere restaurant interior"
+          >
+
+          <div class="image-caption">
+            <span>THE SPACE</span>
+            <strong>Designed for meaningful moments.</strong>
+          </div>
+
+        </div>
+
+
+        <div class="experience-content reveal">
+
+          <span class="section-number">03</span>
+          <p class="eyebrow">THE EXPERIENCE</p>
+
+          <h2>
+            Designed to make
+            <em>you stay.</em>
+          </h2>
+
+          <p>
+            Dari pencahayaan yang hangat hingga setiap detail
+            meja makan, kami merancang LUMIÈRE sebagai tempat
+            untuk menikmati makanan sekaligus menciptakan kenangan.
+          </p>
+
+
+          <div class="features">
+
+            <div class="feature-item">
+              <span>01</span>
+              <div>
+                <h3>Seasonal Ingredients</h3>
+                <p>Bahan segar yang dipilih berdasarkan musim.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span>02</span>
+              <div>
+                <h3>Thoughtful Service</h3>
+                <p>Pelayanan hangat dengan perhatian pada detail.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span>03</span>
+              <div>
+                <h3>Elegant Atmosphere</h3>
+                <p>Ruang nyaman untuk dinner, meeting, dan celebration.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CHEF ================= -->
+    <section class="chef section">
+
+      <div class="container chef-grid">
+
+        <div class="chef-content reveal">
+
+          <p class="eyebrow">MEET OUR CHEF</p>
+
+          <h2>
+            "Great food begins
+            <em>with respect.</em>"
+          </h2>
+
+          <p>
+            Chef Adrian Mahendra membawa pengalaman kuliner
+            modern dengan pendekatan sederhana: menghormati
+            bahan, memahami rasa, dan memberikan yang terbaik
+            untuk setiap tamu.
+          </p>
+
+          <div class="chef-signature">
+            Adrian Mahendra
+          </div>
+
+        </div>
+
+        <div class="chef-image reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=90"
+            alt="Chef Adrian"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIAL ================= -->
+    <section class="testimonials section">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <p class="eyebrow">
+            GUEST EXPERIENCES
+          </p>
+
+          <h2>
+            Loved by our
+            <em>guests.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="testimonial-slider reveal">
+
+          <button class="slider-btn prev" id="prevTestimonial">
+            ←
+          </button>
+
+          <div class="testimonial-content">
+
+            <div class="stars">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <blockquote id="testimonialText">
+              “Salah satu pengalaman dining terbaik yang pernah
+              saya rasakan. Makanannya luar biasa dan suasananya
+              benar-benar membuat kami ingin kembali.”
+            </blockquote>
+
+            <div class="testimonial-author">
+
+              <div class="avatar">
+                A
+              </div>
+
+              <div>
+                <strong id="testimonialName">
+                  Amanda Putri
+                </strong>
+
+                <span>
+                  Verified Guest
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <button class="slider-btn next" id="nextTestimonial">
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery section" id="gallery">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+
+            <span class="section-number">04</span>
+
+            <p class="eyebrow">
+              OUR GALLERY
+            </p>
+
+            <h2>
+              A glimpse of
+              <em>LUMIÈRE.</em>
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="gallery-grid reveal">
+
+          <div class="gallery-item large">
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=90" alt="Restaurant food">
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=90" alt="Restaurant dining">
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=90" alt="Restaurant table">
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?auto=format&fit=crop&w=900&q=90" alt="Fine dining">
+          </div>
+
+          <div class="gallery-item large">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=90" alt="Restaurant interior">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= RESERVATION ================= -->
+    <section class="reservation section" id="reservation">
+
+      <div class="container reservation-container">
+
+        <div class="reservation-content reveal">
+
+          <p class="eyebrow">
+            MAKE A RESERVATION
+          </p>
+
+          <h2>
+            Your table
+            <em>awaits.</em>
+          </h2>
+
+          <p>
+            Rencanakan pengalaman dining Anda bersama kami.
+            Reservasi tersedia untuk lunch, dinner, private event,
+            maupun celebration.
+          </p>
+
+        </div>
+
+
+        <form class="reservation-form reveal" id="reservationForm">
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Time</label>
+
+              <select id="time" required>
+                <option value="">Select time</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="guests">
+                Guests
+              </label>
+
+              <select id="guests" required>
+
+                <option value="">
+                  Number of guests
+                </option>
+
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5 Guests</option>
+                <option>6+ Guests</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+62 812..."
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="occasion">
+                Occasion
+              </label>
+
+              <select id="occasion">
+
+                <option>Regular Dining</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Business Dinner</option>
+                <option>Other</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <button type="submit" class="btn btn-primary full">
+            Confirm Reservation
+            <span>→</span>
+          </button>
+
+          <p class="form-note">
+            * Demo website. Reservation akan diarahkan ke sistem booking/WhatsApp.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact section" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+
+          <p class="eyebrow">
+            FIND US
+          </p>
+
+          <h2>
+            Come say
+            <em>hello.</em>
+          </h2>
+
+          <div class="contact-list">
+
+            <div>
+              <span>ADDRESS</span>
+              <p>
+                Jl. Culinary No. 18<br>
+                Bogor, West Java 16111
+              </p>
+            </div>
+
+            <div>
+              <span>OPENING HOURS</span>
+              <p>
+                Tuesday — Sunday<br>
+                12:00 — 22:00
+              </p>
+            </div>
+
+            <div>
+              <span>CONTACT</span>
+              <p>
+                +62 812 3456 7890<br>
+                hello@lumiere.id
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-placeholder reveal">
+
+          <div class="map-card">
+
+            <span>●</span>
+
+            <strong>
+              LUMIÈRE
+            </strong>
+
+            <p>
+              Bogor, Indonesia
+            </p>
+
+            <a href="#" class="text-link">
+              Get Directions
+            </a>
+
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+
+  href="https://wa.me/6288987242440?text=Halo%20LUMI%C3%88RE,%20saya%20ingin%20bertanya%20tentang%20reservasi."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with LUMIÈRE on WhatsApp"
+>
+  <span class="whatsapp-tooltip">Chat with us</span>
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M19.11 17.39c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.84 1.05-.15.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.33-1.56-1.49-1.83-.15-.27-.02-.42.11-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.44-.82-1.97-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22s.96 2.57 1.09 2.75c.13.18 1.89 2.89 4.58 4.05.64.28 1.14.45 1.53.57.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.16.15-1.27-.06-.12-.24-.18-.51-.32z"/>
+    <path d="M16.02 3.2C8.96 3.2 3.22 8.94 3.22 16c0 2.26.59 4.47 1.71 6.42L3.13 28.8l6.53-1.71A12.75 12.75 0 0 0 16.02 28.8c7.06 0 12.8-5.74 12.8-12.8S23.08 3.2 16.02 3.2zm0 23.47c-2.04 0-4.03-.55-5.77-1.59l-.41-.24-3.88 1.02 1.04-3.78-.27-.39A10.65 10.65 0 1 1 16.02 26.67z"/>
+  </svg>
+</a>

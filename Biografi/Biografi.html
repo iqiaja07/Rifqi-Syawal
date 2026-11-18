@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Profesional</title>
+    <!-- Menggunakan font Google 'Poppins' untuk kesan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --bg-color: #0f172a;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container Utama dengan efek Kaca (Glassmorphism) */
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 900px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        /* Header / Bagian Atas */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6); 
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Navigasi Tombol (Tabs) */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Konten Area */
+        .content-area {
+            position: relative;
+            min-height: 250px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling Isi Konten */
+        .content-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .content-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-list i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        .info-text strong {
+            display: block;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .info-text span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Skill Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--glass-bg);
+            border: 1px solid var(--primary);
+            color: var(--text-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .nav-tabs { gap: 10px; }
+            .tab-btn { padding: 10px 16px; font-size: 0.9rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Profil Atas -->
+        <header class="header">
+            <!-- Ganti src dengan link/path foto kamu jika ada -->
+            <img src="foto-profile.jpeg" alt="Foto Profil" class="profile-img">
+            <h1>Rifqi Syawal</h1>
+            <p>Web Developer dan UI Design</p>
+        </header>
+
+        <!-- Navigasi Interaktif -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'profil')">
+                <i class="fas fa-user"></i> Profil
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'pendidikan')">
+                <i class="fas fa-graduation-cap"></i> Pendidikan
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'keahlian')">
+                <i class="fas fa-laptop-code"></i> Keahlian
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'kontak')">
+                <i class="fas fa-envelope"></i> Kontak
+            </button>
+        </nav>
+
+        <!-- Area Konten Dinamis -->
+        <div class="content-area">
+            
+            <!-- Tab Profil -->
+            <div id="profil" class="tab-content active">
+                <div class="content-card">
+                    <h2>About Me</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                         Saya adalah seorang siswa kelas 10 yang sedang menempuh pendidikan dan terus berusaha mengembangkan kemampuan diri. Saya memiliki rasa ingin tahu yang cukup tinggi dan senang mempelajari hal-hal baru, terutama yang berkaitan dengan matematika, lingkungan, dan berbagai tugas sekolah. Saya juga suka bekerja sama dalam mengerjakan proyek dan berdiskusi untuk menemukan solusi dari suatu masalah.Saya menyadari bahwa masih banyak hal yang perlu saya pelajari dan perbaiki. Karena itu, saya berusaha untuk tidak mudah menyerah ketika menghadapi kesulitan. Saya ingin terus meningkatkan kemampuan, menjadi pribadi yang lebih percaya diri, bertanggung jawab, dan mampu mencapai tujuan yang saya inginkan di masa depan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab Pendidikan -->
+            <div id="pendidikan" class="tab-content">
+                <div class="content-card">
+                    <h2>Pendidikan</h2>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-university"></i>
+                            <div class="info-text">
+                                <strong>Riwayat Pedidikan</strong>
+                                <span>Elementary School-Junior High School-Voncational High School</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-school"></i>
+                            <div class="info-text">
+                                <strong>SMKN 1 CIOMAS</strong>
+                                <span>Jurusan Pemrograman Perangkat Lunak Dan Gim (2026-2028)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab Keahlian -->
+            <div id="keahlian" class="tab-content">
+                <div class="content-card">
+                    <h2>Keahlian Utama</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Public Speaking</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">English Language</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Kontak -->
+            <div id="kontak" class="tab-content">
+                <div class="content-card">
+                    <h2>Hubungi Saya</h2>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div class="info-text">
+                                <strong>Email</strong>
+                                <span>rifqisyawal111@gmail.com</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="info-text">
+                                <strong>Telepon / WhatsApp</strong>
+                                <span>+62 889 8724 2440</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <div class="info-text">
+                                <strong>Github</strong>
+                                <span>https://github.com/iqiaja07</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script untuk interaksi tombol (Tabs) -->
+    <script>
+        function openTab(evt, tabName) {
+            // Sembunyikan semua tab-content
+            let tabContent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+
+            // Hapus class 'active' dari semua tombol
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            // Tampilkan tab yang dipilih dan tambahkan class 'active' pada tombolnya
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
